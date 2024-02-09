@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-widht, initial-scale=1.0">
+<title>document</title>
+</head>
+<body>
+    <script>
+function entierAleatoire(min, max) 
+{ 
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function test_aleatoire()
+{
+let valeur_alea = entierAleatoire(0,10);
+console.log(valeur_alea);
+let nombre_essai=1;
+while(nombre_essai<=3)
+{
+var x = prompt("entrer un entier entre 0 et 1");
+if (x==valeur_alea)
+{
+    alert("bravo!!");
+    return(nombre_essai);
+}
+else if (yx!=valeur_alea)
+{
+nombre_essai++;
+    alert("oups, une autre fois!")
+}
+else
+{
+    alert("vous avez perdu");
+}
+}
+}
+
+    </script>
+  </body>
+</html>
