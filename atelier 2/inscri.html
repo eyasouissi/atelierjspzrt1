@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="utf-8"/>
+        <title> atelier</title>
+        <script src="inscri.js" defer> </script>
+        <style>
+            .red { color: red; }
+            .green { color: green; }
+        </style>
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="accueil.html">home </a>
+                <a href="projetsettaches.html">projets et taches</a>
+                <a href="listeemployes.html">liste employes </a>
+                <a href="inscription.html">inscription </a>
+            </nav>
+            <hr>
+            <img src="assets/image.png" alt="texte affiche" width="50%" height="50%"
+             >
+        </header>
+        <section>
+            <h2>Inscription au site</h2>
+            <form id="inscriptionForm" method="get">
+                <table>
+                    <tr>
+                        <td><label>Nom:</label></td>
+                        <td><input name="lastname" type="text" required pattern="[a-zA-Z]{1,}" title="Veuillez entrer un 
+                            nom valide (lettres uniquement)"></td><!-- apres modification required pattern="[a-zA-Z]{2,} ou bien required pattern="[a-zA-Z]+" minlength="2"  -->
+                            <td><span class="error"></span></td> <!-- Pour afficher le message de validation -->
+
+                    </tr>
+                    <tr>
+                        <td><label>Prénom</label></td>
+                        <td><input name="firstname" type="text" required pattern="[a-zA-Z]+" minlength="1"  title="Veuillez entrer un 
+                            prénom valide (lettres uniquement)"></td>
+                            <td><span class="error"></span></td> 
+
+                    </tr>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td><input name="user_mail" type="email" pattern="+@+.tn" required></td>
+                        <td><span class="error"></span></td> 
+
+                    </tr>
+                    <tr>
+                        <td><label>Téléphone</label></td>
+                        <td><input id="dateOfBirth" name="phone_number" type="tel" required title="Veuillez entrer un 
+                            numéro de téléphone valide (8 chiffres)" pattern="[0-9]{8}"></td>
+                            <td><span class="error"></span></td> 
+
+                    </tr>
+                    <tr>
+                        <td><label>Date de naissance</label></td>
+                        <td><input name="birth_date" id="birth_date" type="date" required oninput="validerDateOfBirth()"></td>
+                        <td><span class="error"></span></td>
+
+                    </tr>
+                    <tr>
+                        <td><label>Mot de passe:</label></td>
+                        <td><input name="user_pwd" type="password" required pattern="[a-zA-Z0-9]{8,}" title="Le mot de passe doit contenir au moins 8 caractères, incluant au moins un chiffre, une lettre 
+                            minuscule et une lettre majuscule."></td>
+                            <td><span class="error"></span></td> 
+
+                    </tr>
+                </table>
+                <input type="submit" value="S'inscrire" >
+             </form>
+        </section>
+        <hr>
+        <footer>
+            <p>contact</p>
+            <a href="mailto:islem@esprit.tn">link</a>
+            <p>adresse: Gazela</p>
+        </footer>
+    </body>
+</html>
